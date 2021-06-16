@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-html {
-  font-family: "Open Sans", sans-serif;
+@font-face {
+  font-family: "Arboria Medium";
+  src: url(../assets/Arboria-Medium.ttf);
   font-weight: 600;
 }
+
 html a {
   text-decoration: none;
   color: inherit;
@@ -20,7 +21,7 @@ html input {
   border: 1px solid #f5c6cb;
   border-radius: 4px;
   color: #721c24;
-  font-family: "Open Sans", sans-serif;
+  font-family: Arboria Medium;
   font-weight: 600;
   padding: 10px;
   position: fixed;
@@ -33,6 +34,9 @@ html input {
   width: 100%;
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .header--floating {
@@ -100,7 +104,7 @@ html input {
 .header__input::placeholder {
   font-size: 0.9375rem;
   font-weight: 600;
-  font-family: "Open Sans";
+  font-family: Arboria Medium;
   color: #9b9b9b;
 }
 .header__drawer {
@@ -136,6 +140,7 @@ html input {
   text-transform: uppercase;
   padding-bottom: 5px;
   vertical-align: baseline;
+  font-family: Arboria Medium;
 }
 .header__menu .menu__link:hover {
   border-bottom: 2px solid #000;
@@ -149,9 +154,12 @@ html input {
 }
 .main__breadcrumbs {
   margin-bottom: 16px;
+  font-family: Arboria Medium;
+  margin-top: 155px;
 }
 .main__breadcrumbs .breadcrumbs__list {
   display: flex;
+  font-family: Arboria Medium;
 }
 @media (max-width: 1200px) {
   .main__breadcrumbs .breadcrumbs__list {
@@ -237,10 +245,86 @@ html input {
 }
 
 @media (max-width: 1200px) {
+  .side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 10vh;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    border-right: solid 1px rgb(189, 189, 189);
+    margin-top: 25px;
+  }
+
+  .side-menu a {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    font-family: Arboria Medium;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    border: 1px solid rgb(209, 209, 209);
+    border-style: none none solid none;
+    margin: 0.313rem 0 0.313rem 5%;
+  }
+
+  .img-menu-mobile {
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    margin-right: 0.625rem;
+  }
+
+  .side-menu a:hover {
+    color: black;
+    border: 1px solid black;
+    border-style: none none solid none;
+  }
+
+  .side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .menu-opcao-mobile {
+    margin-left: 5%;
+  }
+
+  @media screen and (max-height: 450px) {
+    .side-menu {
+      padding-top: 15px;
+    }
+    .side-menu a {
+      font-size: 18px;
+    }
+  }
+
+  .header__logo__mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1199px) {
+  .side-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
   .main__products .products__list {
     flex-wrap: wrap;
   }
 }
+
 @media (max-width: 1200px) {
   .main__products .products__card {
     flex-basis: 50%;
@@ -268,12 +352,14 @@ html input {
   text-align: center;
   margin-top: 8px;
   margin-bottom: 10px;
+  font-family: Arboria Medium;
 }
 .main__products .products__card .card__price {
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  font-family: Arboria Medium;
 }
 
 .footer {

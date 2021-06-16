@@ -11,6 +11,142 @@
   </head>
 
   <body>
+    <div id="myside-menu" class="side-menu">
+      <ul class="header-menu-mobile" style="padding: 0">
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >NOVIDADES
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+          /></a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >FEMININO
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >MASCULINO
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >INFANTIL
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >MODA ÍNTIMA
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >CALÇADOS
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >ACESSÓRIOS E RELÓGIOS
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >BELEZA E PERFURME
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >CASA RIACHUELO
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >ELETRÔNICOS
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >PERSONAGENS
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="menu-opcao-mobile" href=""
+            >OUTLET
+            <img
+              class="img-menu-mobile"
+              src="assets/arrow-down.png"
+              alt=""
+              width="10"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <div id="messageView"></div>
 
     <div class="page-container">
@@ -18,23 +154,34 @@
         <div class="header__container">
           <div class="header__mobile">
             <div class="header__drawer menu header__drawer--active">
-              <img class="menu__img" src="assets/menu.svg" />
+              <img
+                class="menu__img"
+                id="menu-icon"
+                onclick="handleClick()"
+                src="assets/menu.svg"
+              />
               <p class="menu__title">menu</p>
             </div>
-            <div class="header__drawer close">
+            <!-- <div class="header__drawer close">
               <img src="assets/close.svg" />
               <p class="close__title">fechar</p>
-            </div>
+            </div> -->
             <h1 class="header__logo">
-              <img class="header__img" src="assets/rchlo.svg" alt="Logo" />
+              <img
+                class="header__img"
+                id="menu-icon"
+                onclick="handleClick()"
+                src="assets/rchlo.svg"
+                alt="Logo"
+              />
             </h1>
           </div>
           <div class="header__desktop">
-            <h1 class="header__logo">
+            <h1 class="header__logo header__logo__mobile">
               <img class="header__img" src="assets/riachuelo.svg" alt="Logo" />
             </h1>
           </div>
-          <div class="header__search">
+          <div class="header__search" id="header__search">
             <img class="header__icon" src="assets/search.svg" />
             <input
               class="header__input"
@@ -136,13 +283,7 @@
         </section>
 
         <section id="productsView" class="main__products products container">
-          <div id="productsView">
-            <!-- <div class="products__row">
-              <ol class="products__list"> -->
-            <!-- <div id="productsView"></div> -->
-            <!-- </ol>
-            </div> -->
-          </div>
+          <div id="productsView"></div>
         </section>
       </main>
       <footer class="footer">
@@ -531,6 +672,7 @@
 
     <!-- Helpers -->
     <script src="js/app/helpers/Bind.js"></script>
+    <script src="js/app/helpers/Scripts.js"></script>
 
     <!-- Controllers -->
     <script src="js/app/controllers/ProductsController.js"></script>
