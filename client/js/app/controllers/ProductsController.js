@@ -13,7 +13,9 @@ class ProductsController {
     this._products = new Bind(
       new ProductsList(),
       new ProductsView($("#productsView")),
-      "add"
+      "add",
+      "empty",
+      "filter"
     );
   }
 
@@ -33,5 +35,14 @@ class ProductsController {
         })
       )
       .catch((erro) => (this._message = erro));
+  }
+
+  filter(search) {
+    if (search) {
+      this._products.filter(search);
+    } else {
+      this._products.empty();
+      this.allProducts();
+    }
   }
 }

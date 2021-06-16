@@ -186,7 +186,9 @@
             <input
               class="header__input"
               type="search"
+              id="search-input"
               placeholder="O que você está procurando?"
+              onchange="handleSearch()"
             />
           </div>
 
@@ -659,6 +661,13 @@
         </section>
       </footer>
     </div>
+
+    <script>
+      function handleSearch() {
+        var input = document.getElementById("search-input").value;
+        productsController.filter(input);
+      }
+    </script>
 
     <!-- Models -->
     <script src="js/app/models/Message.js"></script>
