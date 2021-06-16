@@ -10,16 +10,11 @@ class ProductsController {
 
     this.allProducts();
 
-    // this._products = new Bind(
-    //   new ProductsList(),
-    //   new ProductsView($("#productsView")),
-    //   "add",
-    //   "empty",
-    //   "order",
-    //   "reverseOrder"
-    // );
-
-    new ProductsView($("#productsView"));
+    this._products = new Bind(
+      new ProductsList(),
+      new ProductsView($("#productsView")),
+      "add"
+    );
   }
 
   allProducts() {
@@ -30,7 +25,11 @@ class ProductsController {
       .getProducts()
       .then((products) =>
         products.forEach((product) => {
-          this._products.add(product);
+          try {
+            this._products.add(product);
+          } catch (error) {
+            console.log(error);
+          }
         })
       )
       .catch((erro) => (this._message = erro));

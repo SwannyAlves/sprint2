@@ -7,8 +7,6 @@ class ProductService {
     return this._http
       .get("http://localhost:3000/produtos")
       .then((products) => {
-        console.log("oi");
-        console.log(products);
         return products.map(
           (objeto) => new Product(objeto.imagem, objeto.descricao, objeto.valor)
         );

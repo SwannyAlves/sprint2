@@ -4,9 +4,12 @@ class ProductsView extends View {
   }
 
   template(model) {
-    return `        
-          ${model.products.map(
-            (item) => `         
+    return `     
+      <div class="products__row">
+       <ol class="products__list">   
+          ${model.products
+            .map(
+              (item) => `         
               <li class="products__card">
                 <div class="card">
                   <img
@@ -21,7 +24,10 @@ class ProductsView extends View {
                 </div>
               </li>  
           `
-          )}               
+            )
+            .join("")} 
+            </ol>
+            </div>            
     `;
   }
 }
